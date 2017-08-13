@@ -1,0 +1,27 @@
+<%= form_for(rui) do |f| %>
+  <% if rui.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rui.errors.count, "error") %> prohibited this rui from being saved:</h2>
+
+      <ul>
+      <% rui.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :knowledge %>
+    <%= f.text_field :knowledge %>
+  </div>
+
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.text_area :time %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class Rui < ApplicationRecord
+end
